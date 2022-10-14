@@ -22,8 +22,6 @@ export class CartComponent implements OnInit {
   items: Array<interfaceDishes> = [];
   // items: Array<interfaceDishes> = dishes;
 
-  result: number = 0;
-
   constructor(private cart: CartService) { }
 
   ngOnInit(): void {
