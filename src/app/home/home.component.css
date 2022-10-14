@@ -1,0 +1,29 @@
+.background-home {
+  background-image: url("src/assets/images/pizza-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1100px;
+  width: 100%;
+}
+
+.vertical-position {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 10rem;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lato", sans-serif;
+  font-family: "Ms Madi", cursive;
+  text-align: center;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.btn-home-menu {
+  display: block;
+  margin: 3% auto 0 auto;
+  padding: 0.5% 1.5%;
+  font-size: 24px;
+  border-radius: 0.7rem;
+}
