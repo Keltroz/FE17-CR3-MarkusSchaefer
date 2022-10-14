@@ -44,6 +44,11 @@ h1 {
   text-decoration: underline;
 }
 
+.container-overview {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .misc-infos-home {
   width: 50%;
   margin: 2% auto;
