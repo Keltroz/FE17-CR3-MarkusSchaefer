@@ -27,3 +27,48 @@
   font-size: 24px;
   border-radius: 0.7rem;
 }
+
+.container-width {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.vertical-alignment {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 { 
+    font-size: 6rem;
+    font-family: "Dancing Script", cursive;
+    font-family: "Lato", sans-serif;
+    font-family: "Ms Madi", cursive;
+    text-align: center;
+    margin: 4% 0;
+    text-decoration: underline;
+}
+
+h2 {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 8px;
+}
+
+.home-content-beer {
+    margin-top: 5%;
+    padding: 5% 0;
+    background-color: rgb(242, 242, 242);
+}
+
+.home-content-beer2 {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.misc-infos {
+    width: 60%;
+    margin: 2% auto;
+}
