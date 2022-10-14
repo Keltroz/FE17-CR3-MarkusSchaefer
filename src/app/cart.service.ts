@@ -10,8 +10,8 @@ export class CartService {
 
   constructor() { }
 
-  addToCart(product: interfaceDishes) {
-    this.items.push(product);
+  addToCart(dish: interfaceDishes) {
+    this.items.push(dish);
   }
 
   getItems() {

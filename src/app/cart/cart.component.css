@@ -9,5 +9,36 @@
 }
 
 .test {
-    border: 1px solid black;
+    padding: 1%;
+    background-color: rgb(242, 242, 242);
+}
+
+/* .row {
+    width: 20%;
+} */
+
+.card {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.form {
+    margin: 5% auto 0 auto;
+    width: 9.4%;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+li {
+    margin: 7% 0%;
+}
+
+label {
+    margin-bottom: 3%;
+}
+
+#submitBtn {
+    margin-top: 7%;
 }

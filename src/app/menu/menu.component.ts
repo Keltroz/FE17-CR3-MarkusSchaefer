@@ -10,16 +10,22 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-
   dishes: Array<interfaceDishes> = dishes;
+  dish: interfaceDishes = {} as interfaceDishes;
+  id: number = 0;
 
-  constructor(private route: ActivatedRoute, private cart: CartService) {
-    // console.log(this.dishes);
-  }
+  constructor(private route: ActivatedRoute, private cart: CartService) {}
 
   ngOnInit(): void {
-
+    // this.route.params.subscribe((params: Params) => {
+    //   this.id = +params['id'];
+    //   this.dish = dishes[this.id];
+    // });
   }
 
- 
+  addToCart() {
+    window.alert('Your product has been added to your cart.');
+    this.cart.addToCart(this.dish);
+    console.log(this.dish)
+  }
 }

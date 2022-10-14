@@ -15,11 +15,11 @@
         <hr />
         <p class="card-text">{{ dish.price | currency: "EUR" }}</p>
         <hr />
-        <ng-template [ngIf]="dish.available" [ngIfElse]="empty">
+        <ng-template [ngIf]="dish.available == true" [ngIfElse]="empty">
           <a class="btn btn-details btn-primary" routerLink="/details/{{ i }}"
             >Details</a
           >
-          <a class="btn btn-order btn-success">Order</a>
+          <a class="btn btn-order btn-success" (click)="addToCart()">Order</a>
         </ng-template>
       </div>
     </div>

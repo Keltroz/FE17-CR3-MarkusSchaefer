@@ -1,25 +1,44 @@
-<div class="card card-order">
-  <div class="test">
-    <p>Cart - x Item(s)</p>
-  </div>
-  <div class="cart-item" *ngFor="let item of items">
-    <!-- <div class="card"> -->
-    <div class="row">
-      <div class="col">
-        {{ item.img }}
-      </div>
-      <div class="col">
-        {{ item.name }}
-        <br /><br />
-        {{ item.description }}
-      </div>
-      <div class="col">{{ item.price | currency: "EUR" }}</div>
+<div class="card">
+  <p>hi</p>
+  <div class="row" *ngFor="let item of items; index as i">
+    <div class="col-sm">
+      <img src="{{ item.img }}" alt="" width="100%" />
     </div>
-
-    <div class="row"></div>
-    <!-- </div>  -->
+    <div class="col-sm">
+      {{ item.name }}
+    </div>
+    <div class="col-sm">
+      {{ item.price | currency: "EUR" }}
+    </div>
+    <hr />
   </div>
 </div>
-<div class="card card-sum">
-  <p>Summary</p>
+
+<div class="form">
+  <!-- on click event on the form like (ngSubmit)="onSubmit()" or in the button like (click)="onSubmit()" -->
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <ul>
+      <li>
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName" />
+      </li>
+      <li>
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName" />
+      </li>
+      <li>
+        <label for="address">Address: </label>
+        <input id="address" type="text" formControlName="address" />
+      </li>
+      <li>
+        <label for="email">Email: </label>
+        <input id="email" type="text" formControlName="email" />
+      </li>
+      <li>
+        <button class="btn btn-success" id="submitBtn" type="submit" [disabled]="!profileForm.valid">
+          Purchase
+        </button>
+      </li>
+    </ul>
+  </form>
 </div>
