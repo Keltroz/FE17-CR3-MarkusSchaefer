@@ -29,46 +29,68 @@
 }
 
 .container-width {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.vertical-alignment {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+h1 {
+  font-size: 6rem;
+  font-family: "Dancing Script", cursive;
+  font-family: "Lato", sans-serif;
+  font-family: "Ms Madi", cursive;
+  text-align: center;
+  margin: 4% 0;
+  text-decoration: underline;
 }
 
-h1 { 
-    font-size: 6rem;
-    font-family: "Dancing Script", cursive;
-    font-family: "Lato", sans-serif;
-    font-family: "Ms Madi", cursive;
-    text-align: center;
-    margin: 4% 0;
-    text-decoration: underline;
+.misc-infos-home {
+  width: 50%;
+  margin: 2% auto;
+}
+
+.guests-rating {
+  background-color: rgb(242, 242, 242);
+  padding: 5% 0;
+}
+
+.container-misc-infos-home2 {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pseudo-child {
+  content: "";
+  background-image: url("src/assets/images/italy.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.misc-infos-home2 {
+  width: 50%;
+}
+
+.misc-infos-home2 p {
+  font-size: 20px;
+  position: relative;
+  color: black;
+  text-align: center;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
 
 h2 {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 8px;
-}
-
-.home-content-beer {
-    margin-top: 5%;
-    padding: 5% 0;
-    background-color: rgb(242, 242, 242);
-}
-
-.home-content-beer2 {
-    margin: 0 auto;
-    width: 60%;
-}
-
-.misc-infos {
-    width: 60%;
-    margin: 2% auto;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+  color: rgb(21, 21, 196);
 }
