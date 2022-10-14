@@ -2,22 +2,28 @@
 <div
   class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
 >
-<div class="col">
+  <div class="col" *ngFor="let dish of dishes; index as i">
     <div class="card">
-        <img src="" class="card-img-top text-center" alt="Pizza Bild" />
-        <div class="card-body">
-            <h5 class="card-title fw-bold">Pizza</h5>
-            <p class="card-text">Infos</p>
-            <hr>
-            <p class="card-text">Price</p>
-            <hr>
-            <ng-template [ngIf]="" [ngIfElse]="empty">
-          <a class="btn btn-details btn-primary" routerLink="">Details</a>
-          <a class="btn btn-order btn-success" routerLink="">Order</a>
+      <img
+        src="{{ dish.img }}"
+        class="card-img-top text-center"
+        alt="Pizza Img"
+      />
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{ dish.name }}</h5>
+        <p class="card-text">{{ dish.description }}</p>
+        <hr />
+        <p class="card-text">{{ dish.price | currency: "EUR" }}</p>
+        <hr />
+        <ng-template [ngIf]="dish.available" [ngIfElse]="empty">
+          <a class="btn btn-details btn-primary" routerLink="/details/{{ i }}"
+            >Details</a
+          >
+          <a class="btn btn-order btn-success">Order</a>
         </ng-template>
-        </div>
       </div>
     </div>
+  </div>
   <ng-template #empty>
     <p class="text-danger">This product is not available.</p>
   </ng-template>

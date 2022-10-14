@@ -1,1 +1,20 @@
-<p>details works!</p>
+<h2>Product Details</h2>
+
+<div class="card-container" *ngIf="dish">
+  <div class="card" style="width: 34rem">
+    <img
+      src="{{ dish.img }}"
+      class="card-img-top text-center"
+      alt="{{ dish.name }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title fw-bold">{{ dish.name }}</h5>
+      <p class="card-text">{{ dish.price | currency: "EUR" }}</p>
+      <p class="card-text" *ngIf="dish.description">
+        {{ dish.description }}
+      </p>
+      <a class="btn btnBack btn-primary" routerLink="/menu">Back</a>
+      <a class="btn btnOrder btn-primary" (click)="addToCart()">Add to cart</a>
+    </div>
+  </div>
+</div>

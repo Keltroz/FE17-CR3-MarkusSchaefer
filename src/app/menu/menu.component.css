@@ -9,6 +9,15 @@ h2 {
     text-shadow: 10px -5px rgb(0, 81, 255);
 }
 
+.row {
+    width: 80%;
+    margin: 5% auto 3% auto;
+}
+
+.card {
+    margin-bottom: 20%;
+}
+
 .btn-details {
     float: left;
 }
