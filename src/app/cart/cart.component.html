@@ -4,7 +4,7 @@
   <p>hi</p>
   <div class="row" *ngFor="let item of items; index as i">
     <div class="col-sm">
-      <img src="{{ item.img }}" alt="" width="100%" />
+      <img src="{{ item.img }}" alt="" width="60%" height="100px"/>
     </div>
     <div class="col-sm">
       {{ item.name }}
@@ -17,6 +17,7 @@
 </div>
 <div>
   <p>{{ amount | currency: "EUR" }}</p>
+  <p>{{ discount | currency:"EUR" }}</p>
 </div>
 <div class="form">
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
@@ -34,8 +35,8 @@
         <input id="address" type="text" formControlName="address" />
       </li>
       <li>
-        <label for="email">Email: </label>
-        <input id="email" type="text" formControlName="email" />
+        <label for="phone">Phone: </label>
+        <input id="phone" type="text" formControlName="phone" />
       </li>
       <li>
         <button class="btn btn-success" id="submitBtn" type="submit" [disabled]="!profileForm.valid">
