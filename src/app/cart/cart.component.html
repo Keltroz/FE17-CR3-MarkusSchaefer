@@ -1,23 +1,64 @@
 <h2>Cart</h2>
-
-<div class="card">
-  <p>hi</p>
-  <div class="row" *ngFor="let item of items; index as i">
-    <div class="col-sm">
-      <img src="{{ item.img }}" alt="" width="60%" height="100px"/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm col-items">
+      <div class="row">
+        <div class="card card-left">
+          <h4 class="ms-1">Item(s)</h4>
+          <hr />
+          <div class="row" *ngFor="let item of items; index as i">
+            <div class="col-sm card-space">
+              <img src="{{ item.img }}" alt="" width="60%" height="100px" />
+            </div>
+            <div class="col-sm text-center">
+              <p style="font-weight: bold; font-size: 20px">{{ item.name }}</p>
+              <p style="font-size: 20px">{{ item.description }}</p>
+            </div>
+            <div class="col-sm text-center">
+              <p style="font-weight: bold; font-size: 20px">
+                Price: {{ item.price | currency: "EUR" }}
+              </p>
+          </div>
+          <hr />
+        </div>
+      </div>
     </div>
-    <div class="col-sm">
-      {{ item.name }}
+  </div>
+  <div class="col-sm col-summary">
+    <div class="card card-right">
+      <h4>Summary</h4>
+      <hr />
+      <div class="row">
+        <div class="col-sm"><p style="font-size: 20px">Products</p></div>
+        <div class="col-sm col-right">
+          <p style="font-size: 20px">{{ amount | currency: "EUR" }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><p style="font-size: 20px">Service</p></div>
+        <div class="col-sm col-right">
+          <p style="font-size: 20px">{{ service | currency: "EUR" }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><p style="font-size: 20px">Discount (15%)</p></div>
+        <div class="col-sm col-right">
+          <p style="font-size: 20px">{{ discount | currency: "EUR" }}</p>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm"><p style="font-size: 20px">Total</p></div>
+        <div class="col-sm col-right">
+          <p style="font-size: 20px">{{ total | currency: "EUR" }}</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm">
-      {{ item.price | currency: "EUR" }}
-    </div>
-    <hr />
   </div>
 </div>
-<div>
-  <p>{{ amount | currency: "EUR" }}</p>
-  <p>{{ discount | currency:"EUR" }}</p>
+</div>
+<div class="order-form">
+  <h3>Order Form</h3>
 </div>
 <div class="form">
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
@@ -39,7 +80,12 @@
         <input id="phone" type="text" formControlName="phone" />
       </li>
       <li>
-        <button class="btn btn-success" id="submitBtn" type="submit" [disabled]="!profileForm.valid">
+        <button
+          class="btn btn-success"
+          id="submitBtn"
+          type="submit"
+          [disabled]="!profileForm.valid"
+        >
           Purchase
         </button>
       </li>

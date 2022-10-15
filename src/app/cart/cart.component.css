@@ -8,32 +8,63 @@ h2 {
     text-decoration: underline;
   }
 
-.card-order {
-    width: 60%;
+h3 {
+        font-size: 3.5rem;
+        font-family: "Dancing Script", cursive;
+        font-family: "Lato", sans-serif;
+        font-family: "Ms Madi", cursive;
+        text-align: center;
+        margin: 4% 0 2% 0;
+        text-decoration: underline;
+}
+
+h4 {
+    margin: 2% auto 1% 0%;
+    font-weight: bold;
+}
+
+/* Card settings */
+
+.card-space {
+    margin-bottom: 2%;
+}
+
+.card {
     margin: 0 auto;
 }
+
+.card-order {
+    margin: 0 auto;
+}
+
+/* Card left */
+
+.card-left {
+    padding: 0 2%;
+    width: 100%;
+}
+
+/* Card right */
 
 .card-sum {
     width: 20%;
     margin: 0 auto;
 }
 
-.test {
-    padding: 1%;
-    background-color: rgb(242, 242, 242);
+    .card-right {
+    padding: 0 2%;
+    width: 50%;
 }
 
-/* .row {
-    width: 20%;
-} */
 
-.card {
-    width: 40%;
-    margin: 0 auto;
+.col-right {
+    text-align: right;
 }
+
+/* Form settings */
 
 .form {
-    margin: 5% auto;
+    margin: 0 auto 5% auto;
     width: 10%;
 }
 
