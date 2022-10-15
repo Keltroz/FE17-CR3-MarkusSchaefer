@@ -20,12 +20,17 @@ export class CartComponent implements OnInit {
 });
 
   items: Array<interfaceDishes> = [];
-  // items: Array<interfaceDishes> = dishes;
+  amount: number = 0;
 
   constructor(private cart: CartService) { }
 
   ngOnInit(): void {
     this.items = this.cart.getItems();
+    this.amount = 0;
+
+    this.items.forEach(item => {
+      this.amount = this.amount + item.price;
+    });
     console.log(this.items);
   }
 

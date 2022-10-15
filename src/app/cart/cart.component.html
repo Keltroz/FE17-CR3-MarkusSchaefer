@@ -1,3 +1,5 @@
+<h2>Cart</h2>
+
 <div class="card">
   <p>hi</p>
   <div class="row" *ngFor="let item of items; index as i">
@@ -13,7 +15,9 @@
     <hr />
   </div>
 </div>
-
+<div>
+  <p>{{ amount | currency: "EUR" }}</p>
+</div>
 <div class="form">
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <ul>
